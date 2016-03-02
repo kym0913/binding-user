@@ -337,33 +337,7 @@ $config['aci_module'] = array (
       ),
     ),
   ),
-  'aa'=>
-  array (
-  'version' => '1',
-  'charset' => 'utf-8',
-  'lastUpdate' => '2015-10-09 20:10:10',
-  'moduleName' => 'helloWorld',
-  'modulePath' => 'adminpanel',
-  'moduleCaption' => 'Hello World',
-  'description' => '这里一个演示模块，来自于吸心大法第三章',
-  'fileList' => NULL,
-  'works' => true,
-  'moduleUrl' => 'adminpanel/helloWorld',
-  'system' => false,
-  'coder' => '胡子锅',
-  'website' => 'http://',
-  'moduleDetails' =>
-  array (
-    0 =>
-    array (
-      'folder' => 'adminpanel',
-      'controller' => 'helloWorld',
-      'method' => 'index',
-      'menu_name' => NULL,
-      'caption' => NULL,
-    ),
-  ),
-),
+
   'helloWorld' =>
   array (
     'version' => '1',
@@ -391,6 +365,42 @@ $config['aci_module'] = array (
       ),
     ),
   ),
+  'bduser' =>
+  array (
+    'version' => '1',
+    'charset' => 'utf-8',
+    'lastUpdate' => '2015-10-09 20:10:10',
+    'moduleName' => 'bduser',
+    'modulePath' => 'adminpanel',
+    'moduleCaption' => 'binding bduser',
+    'description' => '这里一个演示模块，来自于吸心大法第三章',
+    'fileList' => NULL,
+    'works' => true,
+    'moduleUrl' => 'adminpanel/bduser',
+    'system' => false,
+    'coder' => '胡子锅',
+    'website' => 'http://',
+    'moduleDetails' =>
+    array (
+      0 =>
+      array (
+        'folder' => 'adminpanel',
+        'controller' => 'bduser',
+        'method' => 'index',
+        'menu_name' => NULL,
+        'caption' => NULL,
+      ),
+      1 =>
+      array (
+        'folder' => 'adminpanel',
+        'controller' => 'bduser',
+        'method' => 'add',
+        'menu_name' => NULL,
+        'caption' => NULL,
+      ),
+    ),
+  ),
+
   'weixin' =>
   array (
     'version' => '1',
