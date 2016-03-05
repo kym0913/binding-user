@@ -62,34 +62,7 @@
 					</div>
 			</fieldset>
 
-		<fieldset>
-			<legend>可选信息</legend>
-
-      		<div class="form-group">
-				<label  class="col-sm-2 control-label">全名</label>
-				<div class="col-sm-4">
-                  <input name="fullname" type="text" class="form-control" id="fullname" placeholder="请输入详细内容" value="<?php echo $data_info['fullname']?>" size="45" />
-				</div>
-			</div>
-  	  		<div class="form-group">
-				<label class="col-sm-2 control-label">成员图像</label>
-				<div class="col-sm-9">
-					<img  width="100" id="thumb_SRC" border="1" src="<?php echo $this->method_config['upload']['thumb']['upload_url']?>/<?php echo $data_info['avatar']?>"/><input type="hidden" id="thumb" name="thumb" value="<?php echo $data_info['avatar']?>" />
-                    <?php aci_ui_a('','','','',' class="btn btn-default btn-sm uploadThumb_a"','选择图片 ...')?><span class="help-block">只支持图片上传.</span>
-				</div>
-			</div>
-            <div class="form-group">
-				<label  class="col-sm-2 control-label">是否锁定登录</label>
-				<div class="col-sm-4">
-                  	<label class="radio-inline">
-                      <input type="radio" name="is_lock" id="is_lock1" value="1" <?php echo $data_info['is_lock']?'checked="checked"':''?>> 是
-                    </label>
-                    <label class="radio-inline">
-                      <input type="radio" name="is_lock" id="is_lock2" value="0" <?php echo !$data_info['is_lock']?'checked="checked"':''?>> 否
-                    </label>
-				</div>
-			</div>
-	      </fieldset>
+	
 
 
 		<div class='form-actions'>
