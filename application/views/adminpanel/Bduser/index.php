@@ -47,7 +47,7 @@
                 <td><?php echo $v['mems_openid'] ?></td>
                 <td><?php echo $v['mems_totaltime'] ?></td>
                 <td>
-                  <?php aci_ui_a($folder_name, 'user', 'edit', $v['mem_id'], ' class="btn btn-default btn-xs"', '<span class="glyphicon glyphicon-edit"></span> 修改') ?>
+                  <?php aci_ui_a($folder_name, 'mem_id', 'edit', $v['mem_id'], ' class="btn btn-default btn-xs"', '<span class="glyphicon glyphicon-edit"></span> 修改') ?>
                 </td>
 
             </tr>

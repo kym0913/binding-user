@@ -7,7 +7,7 @@
 		<div class='panel-tools'>
 
 			<div class='btn-group'>
-				<?php aci_ui_a($folder_name,'user','index','',' class="btn  btn-sm "','<span class="glyphicon glyphicon-arrow-left"></span> 返回')?>
+				<?php aci_ui_a($folder_name,'bduser','index','',' class="btn  btn-sm "','<span class="glyphicon glyphicon-arrow-left"></span> 返回')?>
 			</div>
 		</div>
 	</div>
@@ -16,57 +16,52 @@
 				<legend>基本信息</legend>
 <?php if(!$is_edit):?>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">用户名</label>
+						<label class="col-sm-2 control-label">姓名</label>
 						<div class="col-sm-4">
 							<input type="text" name="username"  id="username"  class="form-control validate[required]"  placeholder="请输入用户名" >
 						</div>
 					</div>
 <?php else:?>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">用户名</label>
+						<label class="col-sm-2 control-label">姓名</label>
 						<div class="col-sm-4"> <?php echo $data_info['username']?>
 						</div>
 					</div>
 <?php endif;?>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">密码</label>
+						<label class="col-sm-2 control-label">公司</label>
 						<div class="col-sm-4">
-						  <input name="password" type="password" class="form-control" id="password" placeholder="保留为空，密码不修改" value="" size="45" />
+							<input type="text" name="company"  id="company"  class="form-control"  placeholder="请输入公司名称" >
 						</div>
 					</div>
-					<div class="form-group">
-						<label  class="col-sm-2 control-label">重复密码</label>
-						<div class="col-sm-4">
-						  <input name="repassword" type="password" class="form-control validate[equals[password]]" id="repassword" placeholder="保留为空，密码不修改" value="" size="45" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-sm-2 control-label">Email</label>
-						<div class="col-sm-4">
-						  <input name="email" type="text" class="form-control  validate[required,custom[email]]" value="<?php echo $data_info['email']?>" id="email" placeholder="请输入Email" size="45" />
-						</div>
-					</div>
+
 					<div class="form-group">
 						<label class="col-sm-2 control-label">手机号</label>
 						<div class="col-sm-4">
 							<input name="mobile" type="text" class="form-control  validate[required,custom[mobile]]" value="<?php echo $data_info['mobile']?>" id="mobile" placeholder="请输入手机号" size="45" />
 						</div>
 					</div>
+
 					<div class="form-group">
-						<label  class="col-sm-2 control-label">用户组</label>
+						<label class="col-sm-2 control-label">openid</label>
 						<div class="col-sm-4">
-						  <select class="form-control validate[required]" name="group_id">
-							  <?php echo group_options($data_info['group_id'])?>
-							</select>
+							<input type="text" name="openid"  id="openid"  class="form-control"  placeholder="请输入openid" >
 						</div>
 					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">时长</label>
+						<div class="col-sm-4">
+							<input type="text" name="totaltime"  id="totaltime"  class="form-control"  placeholder="请输入时长" >
+						</div>
+					</div>
+
 			</fieldset>
 
-	
 
 
 		<div class='form-actions'>
-			<?php aci_ui_button($folder_name,'user','edit',' type="submit" id="dosubmit" class="btn btn-primary " ','保存')?>
+			<?php aci_ui_button($folder_name,'bduser','edit',' type="submit" id="dosubmit" class="btn btn-primary " ','保存')?>
 		</div>
      </div>
 

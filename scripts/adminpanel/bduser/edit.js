@@ -30,22 +30,6 @@ define(function (require) {
 						max: 10,
 						message: '用户名请为2到10个字符之间'
 					},
-					remote: {
-						url: SITE_URL+folder_name+'/user/check_username',
-						message: '用户名已经存在，请更换用户名'
-					},
-					different: {
-						field: 'password',
-						message: '用户名不能和密码一样'
-					}
-				}
-			},
-			company: {
-				message: '单位不能为空',
-				validators: {
-					notEmpty: {
-						message: '单位不能为空'
-					},
 				}
 			},
 			mobile:{
@@ -56,13 +40,6 @@ define(function (require) {
 					regexp: {
 						regexp: /^[0-9\.]+$/,
 						message: '手机号只能全为数字'
-					}
-				}
-			},
-			group_id: {
-				validators: {
-					notEmpty: {
-						message: '请选择用户组'
 					}
 				}
 			},
@@ -116,20 +93,20 @@ define(function (require) {
 	$('#validateform').bootstrapValidator(validator_config).on('success.form.bv', function(e) {
 		e.preventDefault();
 
-		$("#dosubmit").attr("disabled","disabled");
+	//	$("#dosubmit").attr("disabled","disabled");
 
 
 		$.scojs_message('请稍候...', $.scojs_message.TYPE_WAIT);
 		$.ajax({
 			type: "POST",
-			url: edit?SITE_URL+folder_name+"/Bduser/edit/"+id:SITE_URL+folder_name+"/Bduser/add/",
+			url: edit?SITE_URL+folder_name+"/bduser/edit/"+id:SITE_URL+folder_name+"/bduser/add/",
 			data:  $("#validateform").serialize(),
 			success:function(response){
 				var dataObj=jQuery.parseJSON(response);
 				if(dataObj.status)
 				{
 					$.scojs_message('操作成功,3秒后将返回列表页...', $.scojs_message.TYPE_OK);
-					aci.GoUrl(SITE_URL+folder_name+'/Bduser/add/',1);
+					aci.GoUrl(SITE_URL+folder_name+'/bduser/index/',1);
 				}else
 				{
 					$.scojs_message(dataObj.tips, $.scojs_message.TYPE_ERROR);
@@ -142,6 +119,6 @@ define(function (require) {
 			}
 		});
 
-	}).on('error.form.bv',function(e){ $.scojs_message('所有填写信息不能为空', $.scojs_message.TYPE_ERROR);$("#dosubmit").removeAttr("disabled");});
+	}).on('error.form.bv',function(e){ $.scojs_message('带*号不能为空', $.scojs_message.TYPE_ERROR);$("#dosubmit").removeAttr("disabled");});
 
 });
